@@ -1,6 +1,6 @@
 class usuario:
     def __init__(self, nome_usuario, email, id_usuario):
-        self.nome = nome_usuario
+        self.nome_usuario = nome_usuario
         self.email = email
         self.id_usuario = id_usuario
         self.livros_emprestado = []

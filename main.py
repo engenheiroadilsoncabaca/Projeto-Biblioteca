@@ -17,7 +17,7 @@ def main():  # alimentação da biblioteca
     biblioteca.devolver_livro(1, "Python para Iniciantes")
 
     biblioteca.listar_livros()
-    biblioteca.listar_usuario()
+    biblioteca.listar_usuarios()
 
 if __name__ == "__main__":
     main()

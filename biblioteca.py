@@ -12,7 +12,7 @@ class Biblioteca:
 
     def cadastrar_usuario(self, usuario):
         self.usuarios.append(usuario)
-        print(f"🙎 Usuário '{usuario.nome}' adicionado com sucesso!")
+        print(f"🙎 Usuário '{usuario.nome_usuario}' adicionado com sucesso!")
 
     def emprestar_livro(self, id_usuario, titulo_livro):
         usuario = next((u for u in self.usuarios if u.id_usuario == id_usuario), None)
@@ -30,7 +30,7 @@ class Biblioteca:
 
         usuario.livros_emprestado.append(livro.titulo)
         livro.quantidade -= 1
-        print(f"✅ Livro '{livro.titulo}' emprestado para {usuario.nome}.")
+        print(f"✅ Livro '{livro.titulo}' emprestado para {usuario.nome_usuario}.")
 
     def devolver_livro(self, id_usuario, titulo_livro):
         usuario = next((u for u in self.usuarios if u.id_usuario == id_usuario), None)
@@ -48,15 +48,14 @@ class Biblioteca:
                 livro.quantidade += 1
                 break
 
-        print(f"🔄 Livro '{titulo_livro}' devolvido por {usuario.nome}.")
+        print(f"🔄 Livro '{titulo_livro}' devolvido por {usuario.nome_usuario}.")
 
-
-    def listar_livro(self):
+    def listar_livros(self):
         print("\n 📖Lista de livros📖")
         for livro in self.livros:
-            print (livro)
+            print(livro)
 
-    def listar_usuario(self):
+    def listar_usuarios(self):
         print("\n 🧑‍🦲Lista de Usuários:")
         for usuario in self.usuarios:
             print(usuario)
